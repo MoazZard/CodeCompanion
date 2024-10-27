@@ -1,9 +1,13 @@
 import React from "react";
+import Navbar from "../common/Navbar";
 
 const Tool = () => {
     return (
         <>
-            <h1>Lolllololol</h1>
+            <section className="mt-5 mb-5 container">
+                <Navbar>
+                </Navbar>
+            </section>
         </>
     )
 }
