@@ -37,6 +37,12 @@
   }
 }
 
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 /* Apply to all links in the navbar */
 .navbar .nav-link {
   color: white; /* Default color for links */

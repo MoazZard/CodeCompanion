@@ -1,10 +1,11 @@
 import { useState } from 'react';
+import React from "react";
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
 
-function NavBar() {
+const NavBar = () => {
     const [count, setCount] = useState(0); // example state variable for memory purposes
 
     return (
