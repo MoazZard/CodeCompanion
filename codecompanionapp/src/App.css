@@ -37,23 +37,35 @@
   }
 }
 
-#root {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+.right-side {
+  flex: 1; /* Takes up the remaining space */
+  padding: 20px; /* Padding for main content */
+  overflow-y: auto; /* Allow vertical scrolling if needed */
+}
+
+.navbar {
+  width: 300px;          /* Set width for the sidebar */
+  height: 100vh;         /* Full viewport height */
+  position: fixed;       /* Keep it fixed on the left */
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5); /* Right-side shadow */
 }
 
 /* Apply to all links in the navbar */
 .navbar .nav-link {
-  color: white; /* Default color for links */
+  color: #a7a6a6; /* Default color for links */
   transition: color 0.3s ease, border-bottom 0.3s ease; /* Smooth transition */
   transition: font-size 0.3s ease;
 }
 
-/* Hover effect */
+/* Click effect */
 .navbar .nav-link:hover {
-  color:#174ea6; /* Change color on hover */
-  font-size: 18px;
+  color:#a7a6a6;
+}
+.navbar .nav-link:active {
+  color:#ffffff;
 }
 
 /*button start*/

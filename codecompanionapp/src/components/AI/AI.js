@@ -2,9 +2,11 @@ import React from "react";
 
 const AI = () => {
     return (
-        <div>
-            <h1> This is the AI page </h1>
+        <>
+        <div className="mt-4">
+          <h1 className="mb-4"> AI Companion </h1>
         </div>
+        </>
     );
 }
 
