@@ -15,17 +15,17 @@ const Home = () => {
   };
   
   return (
-    <>
-    <div className="mt-4">
-      <h1 className="mb-4"> Welcome to CODE-COMPANION </h1>
+    <div className="flex-column m-5 p-5">
+      <div>
+        <h1 className="mb-4"> Welcome to CODE-COMPANION </h1>
 
-      <p> This is a simple chatbot that uses GEMINI AI to generate responses.</p>
-      <p> Any struggles or difficulties grasping a coding question? CODE-COMPANION is here to support you! </p>
+        <p> This is a simple chatbot that uses GEMINI AI to generate responses.</p>
+        <p> Any struggles or difficulties grasping a coding question? CODE-COMPANION is here to support you. </p>
+      </div>
+      <div className="d-flex justify-content-center mt-5">
+        <button class="button-start" onClick={handleClick}>Get Started</button>
+      </div>
     </div>
-    <div className="d-flex justify-content-center mt-5">
-      <button class="button-start" onClick={handleClick}>Get Started!</button>
-    </div>
-    </>
   );
 }
 
