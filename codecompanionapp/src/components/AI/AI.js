@@ -7,14 +7,14 @@ const AI = () => {
     const [isLoading, setIsLoading] = useState(false);
 
     // Initialize Gemini AI
-    const apiKey = "AIzaSyD-cIn27qN6TivrKDc00iyi40UpKVuLjAk"; // GEMINI_API_KEY
+    const apiKey = process.env.REACT_APP_GEMINI_API_KEY;
     const genAI = new GoogleGenerativeAI(apiKey);
     const model = genAI.getGenerativeModel({
         model: "gemini-1.5-pro",
     });
 
     const handleSubmit = async (e) => {
-        e.preventDefault(); 
+        e.preventDefault();
         setIsLoading(true);
 
         try {
@@ -50,9 +50,8 @@ const AI = () => {
                         history.map((entry, index) => (
                             <div
                                 key={index}
-                                className={`my-2 p-2 rounded ${
-                                    entry.type === "user" ? "text-end bg-light" : "text-start bg-secondary text-white"
-                                }`}
+                                className={`my-2 p-2 rounded ${entry.type === "user" ? "text-end bg-light" : "text-start bg-secondary text-white"
+                                    }`}
                                 style={{ alignSelf: entry.type === "user" ? "flex-end" : "flex-start" }}
                             >
                                 <strong>{entry.type === "user" ? "User" : "AI"}:</strong> {entry.message}
