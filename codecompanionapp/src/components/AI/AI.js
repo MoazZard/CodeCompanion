@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { GoogleGenerativeAI } from "@google/generative-ai";
+import ReactMarkdown from "react-markdown";
+
 
 const AI = () => {
     const [prompt, setPrompt] = useState("");
@@ -54,7 +56,7 @@ const AI = () => {
                                     }`}
                                 style={{ alignSelf: entry.type === "user" ? "flex-end" : "flex-start" }}
                             >
-                                <strong>{entry.type === "user" ? "User" : "AI"}:</strong> {entry.message}
+                                <strong>{entry.type === "user" ? "User" : "AI"}:</strong> <ReactMarkdown>{entry.message}</ReactMarkdown>
                             </div>
                         ))
                     ) : (
